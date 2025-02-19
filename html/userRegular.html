@@ -18,40 +18,38 @@
         <button type="button" onclick="cerrarSesion()">Cerrar sesión</button>
     </header>
     <main>
-        <div class="tabla-centro">
-            <table class="datos-personales">
-                <h2>Datos Personales</h2>
-                <thead>
-                    <tr>
-                        <th class="alinearTexto">Email</th>
-                        <td class="alinearTexto"><span id="emailUser"></span></td>
-                    </tr>
-                    <tr>
-                        <th class="alinearTexto">Teléfono</th>
-                        <td class="alinearTexto"><span id="telefonoUser"></span></td>
-                    </tr>
-                    <tr>
-                        <th class="alinearTexto">Conjunto Residencial</th>
-                        <td class="alinearTexto"><span id="conjuntoUser"></span></td>
-                    </tr>
-                    <tr>
-                        <th class="alinearTexto">Dirección del Conjunto</th>
-                        <td class="alinearTexto">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.5902808766414!2d-74.78332362622305!3d10.918710256555707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5d3b6f988664f%3A0x170d1ed73cdda6fa!2sCl%2041%20%2319-125%20casa%20116%2C%20Soledad%2C%20Atl%C3%A1ntico!5e0!3m2!1ses!2sco!4v1739449512577!5m2!1ses!2sco"
-                                width="100" height="100" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                            <br>
-                            <span id="direccionConjunto"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="alinearTexto">Año de Nacimiento</th>
-                        <td class="alinearTexto"><span id="fNacimientoUser"></span></td>
-                    </tr>
-                </thead>
-            </table>
+        <div>
+            <h2>Datos Personales</h2>
+            <div class="tabla-centro">
+                <table class="datos-personales">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Conjunto Residencial</th>
+                            <th>Dirección del Conjunto</th>
+                            <th>Año de Nacimiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span id="emailUser"></span></td>
+                            <td><span id="telefonoUser"></span></td>
+                            <td><span id="conjuntoUser"></span></td>
+                            <td>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.5902808766414!2d-74.78332362622305!3d10.918710256555707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5d3b6f988664f%3A0x170d1ed73cdda6fa!2sCl%2041%20%2319-125%20casa%20116%2C%20Soledad%2C%20Atl%C3%A1ntico!5e0!3m2!1ses!2sco!4v1739449512577!5m2!1ses!2sco"
+                                    width="100" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                                <br>
+                                <span id="direccionConjunto"></span>
+                            </td>
+                            <td><span id="fNacimientoUser"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div>
                 <button>Anterior</button>
                 <span></span>
