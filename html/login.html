@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div class="form">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <div class="password-container">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button type="button" class="ojoPassword" onclick="mostrarPassword()">
+                👁️
+            </button>
+        </div>
+        <button type="button" onclick="manejarLogin()" class="ojoPassword">Iniciar sesión</button>
+        <div id="mensaje">mensaje</div>
+        <div id="mensaje2">mensaje</div>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+
+</html>
