@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regular</title>
     <link rel="stylesheet" href="../css/userGlobal.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
 </head>
 
 <body>
@@ -51,6 +52,11 @@
                     </tr>
                 </thead>
             </table>
+            <div>
+                <button>Anterior</button>
+                <span></span>
+                <button>Siguiente</button>
+            </div>
         </div>
 
         <table id="historialActividadesTable">
@@ -63,13 +69,24 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- espacio par los datos de las tablas -->
+                <!-- espacio para los datos de las tablas -->
             </tbody>
         </table>
+
+        <div>
+            <button>Anterior</button>
+            <span></span>
+            <button>Siguiente</button>
+        </div>
+        <div class="containerbotonChatbot">
+            <button onclick="botonChatbot()" class="botonComponente">hh</button>
+            <div id="chatbotComponente"></div>
+        </div>
     </main>
     <footer>
         <p>© 2025 VeciHelp. Todos los derechos reservados.</p>
     </footer>
+    <script src="../js/chatbot.js"></script>
 
 </body>
 
