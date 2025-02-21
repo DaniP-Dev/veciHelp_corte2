@@ -7,6 +7,7 @@
     <title>Servicio</title>
     <link rel="stylesheet" href="../css/userGlobal.css">
     <link rel="stylesheet" href="../css/chatbot.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -18,84 +19,61 @@
         <button type="button" onclick="cerrarSesion()">Cerrar sesión</button>
     </header>
     <main>
-        <div>
-            <h2>Datos Personales</h2>
-            <div class="tabla-centro">
-                <table class="datos-personales">
-                    <thead>
-                        <tr>
-                            <th>Email</th>
-                            <th>Teléfono</th>
-                            <th>Conjunto Residencial</th>
-                            <th>Dirección del Conjunto</th>
-                            <th>Año de Nacimiento</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span id="emailUser"></span></td>
-                            <td><span id="telefonoUser"></span></td>
-                            <td><span id="conjuntoUser"></span></td>
-                            <td>
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.5902808766414!2d-74.78332362622305!3d10.918710256555707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5d3b6f988664f%3A0x170d1ed73cdda6fa!2sCl%2041%20%2319-125%20casa%20116%2C%20Soledad%2C%20Atl%C3%A1ntico!5e0!3m2!1ses!2sco!4v1739449512577!5m2!1ses!2sco"
-                                    width="100" height="100" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade">
-                                </iframe>
-                                <br>
-                                <span id="direccionConjunto"></span>
-                            </td>
-                            <td><span id="fNacimientoUser"></span></td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="tablas">
+            <!-- Tabla de Datos Personales -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Dirección/Conjunto</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="paginacion">
+                <button class="paginacion" onclick="paginaAnterior('tabla1')">Anterior</button>
+                <button class="paginacion" onclick="paginaSiguiente('tabla1')">Siguiente</button>
             </div>
-            <div>
-                <button>Anterior</button>
-                <span></span>
-                <button>Siguiente</button>
+
+            <!-- Tabla de Servicios Ofrecidos -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button class="crear-nuevo" onclick="crearFila()">Crear Nuevo</button>
+            <div class="paginacion">
+                <button class="paginacion" onclick="paginaAnterior('tabla2')">Anterior</button>
+                <button class="paginacion" onclick="paginaSiguiente('tabla2')">Siguiente</button>
             </div>
-        </div>
 
-        <table id="serviciosTable">
-            <h2>Servicios Ofrecidos</h2>
-            <thead>
-                <tr class="desaparecerMobile">
-                    <th>Tipo</th>
-                    <th>Descripción</th>
-                    <th>Tarifa</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- espacio para los datos de las tablas -->
-            </tbody>
-        </table>
-
-        <div>
-            <button>Anterior</button>
-            <span></span>
-            <button>Siguiente</button>
-        </div>
-
-        <table id="historialServiciosTable">
-            <h2>Historial de Servicios</h2>
-            <thead>
-                <tr class="desaparecerMobile">
-                    <th>Fecha</th>
-                    <th>Cliente</th>
-                    <th>Servicio</th>
-                    <th>Calificación</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- espacio para los datos de las tablas -->
-            </tbody>
-        </table>
-
-        <div>
-            <button>Anterior</button>
-            <span></span>
-            <button>Siguiente</button>
+            <!-- Tabla de Historial -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Servicio</th>
+                        <th>Proveedor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="paginacion">
+                <button class="paginacion" onclick="paginaAnterior('tabla3')">Anterior</button>
+                <button class="paginacion" onclick="paginaSiguiente('tabla3')">Siguiente</button>
+            </div>
         </div>
 
         <div class="containerbotonChatbot">
@@ -107,6 +85,7 @@
         <p>© 2025 VeciHelp. Todos los derechos reservados.</p>
     </footer>
     <script src="../js/chatbot.js"></script>
+    <script src="../js/crud.js"></script>
 </body>
 
 </html>
